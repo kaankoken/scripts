@@ -61,3 +61,31 @@ my-binary example-1 example-2
 
 ### Remote Tunnelling
 
+The Script helps to tunneling using SocketXp for remote development or connecting to IoT devices.
+
+### Before run anything
+
+- You need to create an account on [SocketXp](https://www.socketxp.com).
+- Also, you need to follow to the steps to create an **Authentication Token** and connect to remote devices.
+  - You can follow it [here](https://www.socketxp.com/iot/how-to-remote-access-iot-ssh-over-the-internet/).
+
+- After that, you are good to go.
+
+#### How to use
+
+- Script needs `sudo` & [Check Sudo](README.md#check-sudo) to run with.
+
+```bash
+# You could pass your sudo password with the "echo"
+echo 'sudoPassword' | sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username for ssh
+
+# If you already gave permission to your terminal just run
+
+sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
+```
+
+- Alternatively, you could create a binary file using [Create SH Binary](README.md#create-sh-binary) to use it.
+
+```bash
+remote-tunnelling -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
+```

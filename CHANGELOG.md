@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - A new scripts added to code base
   - [Remote Tunnelling using SocketXP](README.md#remote-tunnelling)
 - A few grammar correction & type fix on `README.md`
+- On `remote-tunnelling' script`, `check-sudo` is no longer depends.
 
 ## 2022-11-25
 

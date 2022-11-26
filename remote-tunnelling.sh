@@ -15,6 +15,22 @@
 # Example 
 # sudo -S socketxp connect tcp://$username:$ip --iot-slave --peer-device-id $deviceId --peer-device-port $portNumber --authtoken $authToken
 
+function checkSudo {
+    prompt=$(sudo -nv 2>&1)
+
+    if [ $? -eq 0 ]; then
+      # exit code of sudo-command is 0
+      # "has_sudo__pass_set"
+      echo 1
+    elif echo $prompt | grep -q '^sudo:'; then
+      # "has_sudo__needs_pass"
+      echo 0
+    else
+      # "no_sudo"
+      echo -1
+    fi
+}
+
 function helper {
     echo '''
     Usage: remote-tunnelling [OPTIONS]
@@ -94,9 +110,18 @@ else
             username=${args[$i+1]}
         fi
     done
+    
+    if [ ! -z "$check1" ]
+    then
+        isSudo=$(check-sudo)
+    elif [ ! -z "$check2" ]
+    then
+        isSudo=$(sh check-sudo.sh)
+    else
+        isSudo=$(checkSudo)
+    fi
 
-    isSudo=$(check-sudo)
-    if [[ $isSudo == 1 && $isPipePassed ]]
+    if [[ $isSudo == 0 && $isPipePassed ]]
     then
         echo "You need to run this script with sudo"
         echo "Use this script as -> echo 'your password' | remote-tunnelling"

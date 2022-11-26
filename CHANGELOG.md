@@ -8,9 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## 2022-11-26
 
 - A new scripts added to code base
-  - [Remote Tunnelling using SocketXP](README.md#remote-tunnelling)
+  - [Remote Tunneling using SocketXP](README.md#remote-tunneling)
 - A few grammar correction & type fix on `README.md`
-- On `remote-tunnelling' script`, `check-sudo` is no longer depends.
+- On the `remote-tunneling` script, `check-sudo` is no longer depends.
 
 ## 2022-11-25
 

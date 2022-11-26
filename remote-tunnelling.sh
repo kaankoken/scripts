@@ -33,7 +33,7 @@ function checkSudo {
 
 function helper {
     echo '''
-    Usage: remote-tunnelling [OPTIONS]
+    Usage: remote-tunneling [OPTIONS]
 
     -h or --help: show this help message and exit
     -a or --auth: the authentication token to be used for SocketXp
@@ -43,7 +43,7 @@ function helper {
     -u or --user: the user name to use for the ssh connection
 
     Example 
-    remote-tunnelling.sh -a your-auth-token -d your-device-id -o your-host-address -p your-open-server-port -u your-user-name-to-connect-with
+    remote-tunneling.sh -a your-auth-token -d your-device-id -o your-host-address -p your-open-server-port -u your-user-name-to-connect-with
     '''
 }
 
@@ -124,7 +124,7 @@ else
     if [[ $isSudo == 0 && $isPipePassed ]]
     then
         echo "You need to run this script with sudo"
-        echo "Use this script as -> echo 'your password' | remote-tunnelling"
+        echo "Use this script as -> echo 'your password' | remote-tunneling"
         exit 1
     fi
     if [[ $isSudo == -1 ]]

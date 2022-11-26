@@ -59,7 +59,7 @@ And then move your `my-binary` file to the `usr/local/bin/` folder to run in you
 my-binary example-1 example-2
 ```
 
-### Remote Tunnelling
+### Remote Tunneling
 
 The Script helps to tunneling using SocketXp for remote development or connecting to IoT devices.
 
@@ -75,15 +75,15 @@ The Script helps to tunneling using SocketXp for remote development or connectin
 
 ```bash
 # You could pass your sudo password with the "echo"
-echo 'sudoPassword' | sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username for ssh
+echo 'sudoPassword' | sh remote-tunneling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username for ssh
 
 # If you already permitted to your terminal just run
 
-sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
+sh remote-tunneling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
 ```
 
 - Alternatively, you could create a binary file using [Create SH Binary](README.md#create-sh-binary) to use it.
 
 ```bash
-remote-tunnelling -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
+remote-tunneling -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
 ```

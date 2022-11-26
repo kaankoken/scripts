@@ -1,17 +1,17 @@
 # Run At Me
 
-Personal scripts are created for increasing productivity & help the devs.
+Scripts created for increasing productivity & help the devs.
 
 ## Scripts
 
 ### Check Sudo
 
-Scripts checks whether device has `sudo` command or not. If the command exit checks shell has `sudo` permission.
+The script checks whether the device has `sudo` command or not. If the command exists, it checks shell has `sudo` permission.
 Outputs:
 
-- `Zero(0)` means has `sudo` commands, but it does not have `sudo` powers/permissions on that terminal.
-- `One(1)` means has `sudo` commands, but it has `sudo` powers/permissions on that terminal.
-- `Minus One(-1)` means has no `sudo` commands.
+- `Zero(0)` means have `sudo` commands, but it does not have `sudo` powers/permissions on that terminal.
+- `One(1)` means have `sudo` commands, but it has `sudo` powers/permissions on that terminal.
+- `Minus One(-1)` means have no `sudo` commands.
 
 #### How to use
 
@@ -23,7 +23,7 @@ bash check-sudo.sh
 
 ### Create SH Binary
 
-This script creates *binary files* of a given `bash` script to be run on the **Unix/Linux** based machines.
+This script creates *binary files* of a given `bash` script to be run on **Unix/Linux** based machines.
 
 #### Before run anything
 
@@ -42,7 +42,7 @@ This script creates *binary files* of a given `bash` script to be run on the **U
     brew install shc
     ```
 
-- After that you good to go.
+- After that, you are good to go.
 
 #### How to use
 
@@ -79,7 +79,7 @@ The Script helps to tunneling using SocketXp for remote development or connectin
 # You could pass your sudo password with the "echo"
 echo 'sudoPassword' | sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username for ssh
 
-# If you already gave permission to your terminal just run
+# If you already permitted to your terminal just run
 
 sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username-for-ssh
 ```

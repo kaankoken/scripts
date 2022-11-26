@@ -73,8 +73,6 @@ The Script helps to tunneling using SocketXp for remote development or connectin
 
 #### How to use
 
-- Script needs `sudo` & [Check Sudo](README.md#check-sudo) to run with.
-
 ```bash
 # You could pass your sudo password with the "echo"
 echo 'sudoPassword' | sh remote-tunnelling.sh -a your-auth-token -d device-id-to-connect -o local-port-to-opened -p host-port -u username for ssh
